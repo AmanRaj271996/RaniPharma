@@ -1,38 +1,51 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-bg">
-    <div class="hero-overlay"></div>
-    <div class="floating-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-      <div class="shape shape-4"></div>
-    </div>
+    <div class="hero-pattern"></div>
+    <div class="hero-glow"></div>
   </div>
   <div class="container hero-content">
     <div class="hero-text">
-      <span class="hero-badge animate-fade-up">
-        <i class="fas fa-star"></i> #1 Wholesale Medicine Store in Darbhanga
-      </span>
-      <h1 class="animate-fade-up">Rani Pharma - Your Trusted <span class="highlight">Medicine</span> Wholesale Partner</h1>
-      <p class="animate-fade-up">Providing quality medicines at wholesale prices to pharmacies and hospitals across Bihar. Licensed, certified, and committed to your health business growth.</p>
+      <div class="hero-badge animate-fade-up">
+        <span class="badge-dot"></span>
+        #1 Wholesale Medicine Store in Darbhanga
+      </div>
+      <h1 class="animate-fade-up">Your Trusted Partner in <span class="highlight">Healthcare</span> Distribution</h1>
+      <p class="animate-fade-up">Supplying quality medicines at wholesale prices to pharmacies and hospitals across Bihar. Licensed, certified, and committed to healthcare accessibility.</p>
       <div class="hero-buttons animate-fade-up">
-        <a routerLink="/contact" class="btn btn-primary">
-          <i class="fas fa-phone"></i> Contact Us
+        <a routerLink="/contact" class="btn btn-primary btn-lg">
+          <i class="fas fa-phone"></i> Get in Touch
         </a>
-        <a routerLink="/about" class="btn btn-hero-blue">
-          <i class="fas fa-info-circle"></i> Learn More
+        <a routerLink="/about" class="btn btn-ghost">
+          <i class="fas fa-play-circle"></i> Learn More
         </a>
+      </div>
+      <div class="hero-metrics animate-fade-up">
+        <div class="metric">
+          <strong>10K+</strong>
+          <span>Products</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <strong>500+</strong>
+          <span>Clients</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric">
+          <strong>15+</strong>
+          <span>Years</span>
+        </div>
       </div>
     </div>
     <div class="hero-visual animate-fade-right">
-      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" alt="Trusted medicines" class="hero-image" />
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" alt="Trusted medicines" class="hero-image" />
+        <div class="hero-card-badge">
+          <i class="fas fa-shield-halved"></i>
+          <span>100% Genuine</span>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="hero-wave">
-    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
-    </svg>
   </div>
 </section>
 
@@ -42,8 +55,8 @@
     <div class="stats-grid">
       @for (stat of stats; track stat.label) {
         <div class="stat-card">
-          <h2>{{ stat.number }}</h2>
-          <p>{{ stat.label }}</p>
+          <div class="stat-number">{{ stat.number }}</div>
+          <div class="stat-label">{{ stat.label }}</div>
         </div>
       }
     </div>
@@ -55,8 +68,8 @@
   <div class="container">
     <div class="section-header">
       <span class="section-tag">Why Choose Us</span>
-      <h2>We Deliver Excellence in <span class="highlight">Healthcare Supply</span></h2>
-      <p>Experience the difference with our comprehensive wholesale medicine services</p>
+      <h2>Built for <span class="highlight">Healthcare Excellence</span></h2>
+      <p>Comprehensive wholesale medicine services designed for modern pharmacies</p>
     </div>
     <div class="features-grid">
       @for (feature of features; track feature.title) {
@@ -72,21 +85,67 @@
   </div>
 </section>
 
+<!-- Photo Showcase Section -->
+<section class="showcase-section">
+  <div class="container">
+    <div class="showcase-grid">
+      <div class="showcase-item large">
+        <img src="https://images.unsplash.com/photo-1585435557343-3b092031a831?w=800&q=80" alt="Modern pharmacy warehouse" />
+        <div class="showcase-overlay">
+          <span>State-of-the-Art Storage</span>
+        </div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1471864190281-a93a3070b6de?w=500&q=80" alt="Quality medicines" />
+        <div class="showcase-overlay">
+          <span>Quality Products</span>
+        </div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1563213126-a4273aed2016?w=500&q=80" alt="Fast delivery" />
+        <div class="showcase-overlay">
+          <span>Fast Delivery</span>
+        </div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=500&q=80" alt="Trusted brands" />
+        <div class="showcase-overlay">
+          <span>200+ Brands</span>
+        </div>
+      </div>
+      <div class="showcase-item">
+        <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=500&q=80" alt="Healthcare professionals" />
+        <div class="showcase-overlay">
+          <span>Expert Team</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Categories Section -->
 <section class="categories-section">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Our Products</span>
-      <h2>Medicine <span class="highlight">Categories</span></h2>
-      <p>We stock a comprehensive range of pharmaceutical products</p>
+      <span class="section-tag">Product Catalog</span>
+      <h2>Browse by <span class="highlight">Category</span></h2>
+      <p>Comprehensive pharmaceutical product range from trusted manufacturers</p>
     </div>
     <div class="categories-grid">
       @for (cat of categories; track cat.name) {
         <div class="category-card" (click)="openCategory(cat.name)">
-          <div class="category-icon" [style.background]="cat.color + '15'" [style.color]="cat.color">
-            <i [class]="cat.icon"></i>
+          <div class="category-img">
+            <img [src]="cat.image" [alt]="cat.name" />
           </div>
-          <h4>{{ cat.name }}</h4>
+          <div class="category-body">
+            <div class="category-icon" [style.background]="cat.color + '12'" [style.color]="cat.color">
+              <i [class]="cat.icon"></i>
+            </div>
+            <div class="category-info">
+              <h4>{{ cat.name }}</h4>
+              <span class="category-arrow"><i class="fas fa-arrow-right"></i></span>
+            </div>
+          </div>
         </div>
       }
     </div>
@@ -97,27 +156,33 @@
 <section class="trust-section">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">Your Health, Our Priority</span>
-      <h2>Trusted by <span class="highlight">Families & Pharmacies</span></h2>
-      <p>We believe every family deserves access to quality medicines</p>
+      <span class="section-tag">Our Promise</span>
+      <h2>Trusted by <span class="highlight">500+ Partners</span></h2>
+      <p>Building lasting relationships through quality, reliability, and transparency</p>
     </div>
     <div class="trust-grid">
       <div class="trust-card">
-        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&q=80" alt="Happy healthy family" />
+        <div class="trust-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&q=80" alt="Happy healthy family" />
+        </div>
         <div class="trust-card-content">
           <h4>Healthy Families</h4>
           <p>Helping families stay healthy with genuine, affordable medicines</p>
         </div>
       </div>
       <div class="trust-card">
-        <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400&q=80" alt="Quality medicines" />
+        <div class="trust-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400&q=80" alt="Quality medicines" />
+        </div>
         <div class="trust-card-content">
           <h4>Quality Assured</h4>
           <p>Every medicine sourced from authorized distributors with proper certifications</p>
         </div>
       </div>
       <div class="trust-card">
-        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Professional pharmacist" />
+        <div class="trust-img-wrapper">
+          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Professional pharmacist" />
+        </div>
         <div class="trust-card-content">
           <h4>Expert Guidance</h4>
           <p>Licensed pharmacists ensuring the right medicines reach the right people</p>
@@ -125,8 +190,10 @@
       </div>
     </div>
     <div class="trust-banner">
-      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80" alt="Healthcare professional" class="banner-img" />
       <div class="banner-content">
+        <div class="banner-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
         <h3>Your wellness is our commitment</h3>
         <p>At Rani Pharma, we don't just sell medicines — we build lasting relationships with pharmacies and hospitals who share our vision of accessible healthcare for all.</p>
         <div class="banner-stats">
@@ -196,14 +263,16 @@
 <section class="cta-section">
   <div class="container">
     <div class="cta-content">
-      <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=100&q=80" alt="" class="cta-icon-img" />
+      <div class="cta-badge">
+        <i class="fas fa-rocket"></i>
+      </div>
       <h2>Ready to Partner With Us?</h2>
       <p>Join 500+ pharmacies who trust Rani Pharma for quality medicines at the best wholesale prices.</p>
       <div class="cta-buttons">
-        <a href="https://wa.me/918210680066?text=Hi%20how%20may%20I%20help" target="_blank" class="btn btn-secondary">
+        <a href="https://wa.me/918210680066?text=Hi%2C%20I%20have%20a%20query.%20Can%20you%20please%20help%20me%20with%20it" target="_blank" class="btn btn-secondary btn-lg">
           <i class="fab fa-whatsapp"></i> WhatsApp Us
         </a>
-        <a routerLink="/contact" class="btn btn-outline" style="border-color: white; color: white;">
+        <a routerLink="/contact" class="btn btn-outline-light">
           <i class="fas fa-envelope"></i> Get in Touch
         </a>
       </div>

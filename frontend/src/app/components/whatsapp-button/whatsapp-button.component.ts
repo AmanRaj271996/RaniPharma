@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   template: `
     <a class="whatsapp-float"
-       href="https://wa.me/918210680066?text=Hi%20how%20may%20I%20help"
+       href="https://wa.me/918210680066?text=Hi%2C%20I%20have%20a%20query.%20Can%20you%20please%20help%20me%20with%20it"
        target="_blank"
        rel="noopener"
        aria-label="Chat on WhatsApp">

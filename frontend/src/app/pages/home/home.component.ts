@@ -28,12 +28,12 @@ export class HomeComponent {
   ];
 
   categories = [
-    { name: 'Tablets & Capsules', icon: 'fas fa-capsules', color: '#1a73e8' },
-    { name: 'Syrups & Liquids', icon: 'fas fa-flask', color: '#e91e63' },
-    { name: 'Injections', icon: 'fas fa-syringe', color: '#ff9800' },
-    { name: 'Surgical Items', icon: 'fas fa-kit-medical', color: '#4caf50' },
-    { name: 'Ayurvedic', icon: 'fas fa-leaf', color: '#009688' },
-    { name: 'OTC Products', icon: 'fas fa-store', color: '#9c27b0' }
+    { name: 'Tablets & Capsules', icon: 'fas fa-capsules', color: '#1a73e8', image: 'assets/images/tablets.jpg' },
+    { name: 'Syrups & Liquids', icon: 'fas fa-flask', color: '#e91e63', image: 'assets/images/syrups.jpg' },
+    { name: 'Injections', icon: 'fas fa-syringe', color: '#ff9800', image: 'assets/images/injection.jpg' },
+    { name: 'Surgical Items', icon: 'fas fa-kit-medical', color: '#4caf50', image: 'assets/images/surgicalitems.jpg' },
+    { name: 'Ayurvedic', icon: 'fas fa-leaf', color: '#009688', image: 'assets/images/ayurvedicmeds.jpg' },
+    { name: 'OTC Products', icon: 'fas fa-store', color: '#9c27b0', image: 'assets/images/otc.jpg' }
   ];
 
   // Category modal

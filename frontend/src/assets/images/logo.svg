@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f52ba;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e88e5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#34d399;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f52ba" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  
+  <!-- Shield shape -->
+  <path d="M100 10 L175 45 L175 100 C175 145 145 175 100 190 C55 175 25 145 25 100 L25 45 Z" 
+        fill="url(#grad1)" filter="url(#shadow)"/>
+  
+  <!-- Inner shield highlight -->
+  <path d="M100 22 L165 52 L165 100 C165 140 138 167 100 180 C62 167 35 140 35 100 L35 52 Z" 
+        fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1.5"/>
+  
+  <!-- Medical cross -->
+  <rect x="85" y="60" width="30" height="80" rx="6" fill="white" opacity="0.95"/>
+  <rect x="65" y="85" width="70" height="30" rx="6" fill="white" opacity="0.95"/>
+  
+  <!-- Small pill accent top-left -->
+  <ellipse cx="55" cy="55" rx="8" ry="5" fill="url(#grad2)" transform="rotate(-30 55 55)"/>
+  
+  <!-- Small pill accent top-right -->
+  <ellipse cx="145" cy="55" rx="8" ry="5" fill="url(#grad2)" transform="rotate(30 145 55)"/>
+  
+  <!-- Crown/Rani accent at top -->
+  <path d="M85 35 L90 28 L95 33 L100 25 L105 33 L110 28 L115 35" 
+        fill="none" stroke="url(#grad2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

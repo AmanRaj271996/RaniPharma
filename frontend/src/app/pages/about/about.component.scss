@@ -1,6 +1,7 @@
 .about-hero {
   padding: 160px 0 80px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgba(15, 82, 186, 0.9) 0%, rgba(15, 23, 42, 0.92) 100%),
+              url('https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1600&q=80') center/cover no-repeat;
   text-align: center;
   color: var(--white);
 
@@ -31,7 +32,7 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, #00c853, #69f0ae);
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -40,6 +41,9 @@
 /* Owner Section */
 .owner-section {
   padding: 80px 0;
+  background: linear-gradient(135deg, #eef2ff 0%, #e0f2fe 50%, #f0fdfa 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .owner-grid {
@@ -122,7 +126,9 @@
 /* Values Section */
 .values-section {
   padding: 80px 0;
-  background: var(--gray-50);
+  background: linear-gradient(160deg, #fdf4ff 0%, #faf5ff 40%, #eef2ff 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .section-header {
@@ -163,10 +169,29 @@
 .value-card {
   text-align: center;
   padding: 35px 20px;
-  background: var(--white);
+  background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%);
   border-radius: var(--radius-md);
+  border: 1px solid rgba(99, 102, 241, 0.08);
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+
+  &:nth-child(2) {
+    background: linear-gradient(145deg, #ffffff 0%, #ecfdf5 100%);
+    border-color: rgba(16, 185, 129, 0.1);
+    .value-icon { background: #d1fae5; color: #059669; }
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(145deg, #ffffff 0%, #faf5ff 100%);
+    border-color: rgba(139, 92, 246, 0.1);
+    .value-icon { background: #ede9fe; color: #7c3aed; }
+  }
+
+  &:nth-child(4) {
+    background: linear-gradient(145deg, #ffffff 0%, #fff7ed 100%);
+    border-color: rgba(245, 158, 11, 0.1);
+    .value-icon { background: #fef3c7; color: #d97706; }
+  }
 
   &:hover {
     transform: translateY(-5px);
@@ -201,6 +226,9 @@
 /* Timeline Section */
 .timeline-section {
   padding: 80px 0;
+  background: linear-gradient(135deg, #ecfdf5 0%, #f0fdfa 50%, #e0f2fe 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .timeline {
@@ -271,4 +299,10 @@
     color: var(--text-secondary);
     font-size: 0.9rem;
   }
+}
+
+
+@keyframes meshShift {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
 }
