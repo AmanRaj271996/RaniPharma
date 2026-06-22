@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class NavbarComponent {
   isMenuOpen = false;
   isScrolled = false;
 
-  constructor(public authService: AuthService) {
+  constructor(public authService: AuthService, private router: Router) {
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', () => {
         this.isScrolled = window.scrollY > 50;
@@ -29,5 +29,6 @@ export class NavbarComponent {
   logout(): void {
     this.authService.logout();
     this.isMenuOpen = false;
+    this.router.navigate(['/']);
   }
 }
