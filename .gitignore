@@ -1,0 +1,21 @@
+# Root
+node_modules/
+dist/
+.angular/
+*.db
+bin/
+obj/
+
+# IDE
+.idea/
+.vscode/
+*.suo
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+*.env.local

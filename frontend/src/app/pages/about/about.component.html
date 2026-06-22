@@ -1,0 +1,83 @@
+<!-- Hero Banner -->
+<section class="about-hero">
+  <div class="container">
+    <span class="page-tag animate-fade-up">About Us</span>
+    <h1 class="animate-fade-up">Our Story of Trust & <span class="highlight">Healthcare Excellence</span></h1>
+    <p class="animate-fade-up">Serving the healthcare community of Darbhanga and Bihar since 2009</p>
+  </div>
+</section>
+
+<!-- Owner Section -->
+<section class="owner-section">
+  <div class="container">
+    <div class="owner-grid">
+      <div class="owner-image">
+        <img src="assets/images/owner.jpg" alt="Kumar Raushan - Founder of Rani Pharma" class="owner-photo" />
+      </div>
+      <div class="owner-info">
+        <span class="section-tag">Meet the Founder</span>
+        <h2>Kumar Raushan</h2>
+        <h3 class="owner-title">The Visionary Behind Rani Pharma</h3>
+        <p>With over 15 years of experience in pharmaceutical distribution, Kumar Raushan established Rani Pharma with a simple mission: to make quality medicines accessible and affordable for every pharmacy and hospital in Bihar.</p>
+        <p>Starting from a small shop in Alalpatti, Darbhanga, the business has grown into one of the most trusted wholesale medicine suppliers in the region. His commitment to quality, fair pricing, and exceptional customer service has earned the trust of over 500 pharmacies and healthcare institutions.</p>
+        <div class="owner-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-award"></i>
+            <span>Licensed Pharmacist</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-users"></i>
+            <span>500+ Clients Served</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Darbhanga, Bihar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Values Section -->
+<section class="values-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Values</span>
+      <h2>What Drives <span class="highlight">Our Business</span></h2>
+    </div>
+    <div class="values-grid">
+      @for (value of values; track value.title) {
+        <div class="value-card">
+          <div class="value-icon">
+            <i [class]="value.icon"></i>
+          </div>
+          <h3>{{ value.title }}</h3>
+          <p>{{ value.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Section -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Journey</span>
+      <h2>Milestones That <span class="highlight">Define Us</span></h2>
+    </div>
+    <div class="timeline">
+      @for (milestone of milestones; track milestone.year) {
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">{{ milestone.year }}</span>
+            <h3>{{ milestone.title }}</h3>
+            <p>{{ milestone.desc }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

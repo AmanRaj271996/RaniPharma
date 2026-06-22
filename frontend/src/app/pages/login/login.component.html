@@ -1,0 +1,74 @@
+<section class="login-page">
+  <div class="login-container">
+    <div class="login-visual">
+      <div class="visual-content">
+        <i class="fas fa-pills"></i>
+        <h2>Rani Pharma</h2>
+        <p>Medicine Wholesale Management System</p>
+        <div class="visual-features">
+          <div class="feature"><i class="fas fa-check-circle"></i> Manage Inventory</div>
+          <div class="feature"><i class="fas fa-check-circle"></i> Track Stock Levels</div>
+          <div class="feature"><i class="fas fa-check-circle"></i> Update Prices</div>
+          <div class="feature"><i class="fas fa-check-circle"></i> Monitor Expiry</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="login-form-container">
+      <div class="login-form-wrapper">
+        <div class="form-header">
+          <h2>Welcome Back</h2>
+          <p>Sign in to manage your inventory</p>
+        </div>
+
+        @if (error) {
+          <div class="error-message">
+            <i class="fas fa-exclamation-circle"></i>
+            {{ error }}
+          </div>
+        }
+
+        <form (ngSubmit)="onSubmit()" class="login-form">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user"></i>
+              <input
+                id="username"
+                type="text"
+                [(ngModel)]="username"
+                name="username"
+                placeholder="Enter your username"
+                autocomplete="username">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <div class="input-wrapper">
+              <i class="fas fa-lock"></i>
+              <input
+                id="password"
+                [type]="showPassword ? 'text' : 'password'"
+                [(ngModel)]="password"
+                name="password"
+                placeholder="Enter your password"
+                autocomplete="current-password">
+              <button type="button" class="toggle-pass" (click)="togglePassword()">
+                <i [class]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+              </button>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary submit-btn" [disabled]="isLoading">
+            @if (isLoading) {
+              <i class="fas fa-spinner fa-spin"></i> Signing in...
+            } @else {
+              <i class="fas fa-sign-in-alt"></i> Sign In
+            }
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,212 @@
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+  </div>
+  <div class="container hero-content">
+    <div class="hero-text">
+      <span class="hero-badge animate-fade-up">
+        <i class="fas fa-star"></i> #1 Wholesale Medicine Store in Darbhanga
+      </span>
+      <h1 class="animate-fade-up">Rani Pharma - Your Trusted <span class="highlight">Medicine</span> Wholesale Partner</h1>
+      <p class="animate-fade-up">Providing quality medicines at wholesale prices to pharmacies and hospitals across Bihar. Licensed, certified, and committed to your health business growth.</p>
+      <div class="hero-buttons animate-fade-up">
+        <a routerLink="/contact" class="btn btn-primary">
+          <i class="fas fa-phone"></i> Contact Us
+        </a>
+        <a routerLink="/about" class="btn btn-hero-blue">
+          <i class="fas fa-info-circle"></i> Learn More
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual animate-fade-right">
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" alt="Trusted medicines" class="hero-image" />
+    </div>
+  </div>
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      @for (stat of stats; track stat.label) {
+        <div class="stat-card">
+          <h2>{{ stat.number }}</h2>
+          <p>{{ stat.label }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Why Choose Us</span>
+      <h2>We Deliver Excellence in <span class="highlight">Healthcare Supply</span></h2>
+      <p>Experience the difference with our comprehensive wholesale medicine services</p>
+    </div>
+    <div class="features-grid">
+      @for (feature of features; track feature.title) {
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i [class]="feature.icon"></i>
+          </div>
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Categories Section -->
+<section class="categories-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Our Products</span>
+      <h2>Medicine <span class="highlight">Categories</span></h2>
+      <p>We stock a comprehensive range of pharmaceutical products</p>
+    </div>
+    <div class="categories-grid">
+      @for (cat of categories; track cat.name) {
+        <div class="category-card" (click)="openCategory(cat.name)">
+          <div class="category-icon" [style.background]="cat.color + '15'" [style.color]="cat.color">
+            <i [class]="cat.icon"></i>
+          </div>
+          <h4>{{ cat.name }}</h4>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<!-- Trust Section -->
+<section class="trust-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Your Health, Our Priority</span>
+      <h2>Trusted by <span class="highlight">Families & Pharmacies</span></h2>
+      <p>We believe every family deserves access to quality medicines</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card">
+        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&q=80" alt="Happy healthy family" />
+        <div class="trust-card-content">
+          <h4>Healthy Families</h4>
+          <p>Helping families stay healthy with genuine, affordable medicines</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=400&q=80" alt="Quality medicines" />
+        <div class="trust-card-content">
+          <h4>Quality Assured</h4>
+          <p>Every medicine sourced from authorized distributors with proper certifications</p>
+        </div>
+      </div>
+      <div class="trust-card">
+        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Professional pharmacist" />
+        <div class="trust-card-content">
+          <h4>Expert Guidance</h4>
+          <p>Licensed pharmacists ensuring the right medicines reach the right people</p>
+        </div>
+      </div>
+    </div>
+    <div class="trust-banner">
+      <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=800&q=80" alt="Healthcare professional" class="banner-img" />
+      <div class="banner-content">
+        <h3>Your wellness is our commitment</h3>
+        <p>At Rani Pharma, we don't just sell medicines — we build lasting relationships with pharmacies and hospitals who share our vision of accessible healthcare for all.</p>
+        <div class="banner-stats">
+          <div class="banner-stat">
+            <i class="fas fa-heart"></i>
+            <span>100% Genuine</span>
+          </div>
+          <div class="banner-stat">
+            <i class="fas fa-shield-halved"></i>
+            <span>Licensed & Certified</span>
+          </div>
+          <div class="banner-stat">
+            <i class="fas fa-handshake"></i>
+            <span>15+ Years Trust</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Category Medicines Modal -->
+@if (showCategoryModal) {
+  <div class="category-modal-overlay" (click)="closeCategoryModal()">
+    <div class="category-modal" (click)="$event.stopPropagation()">
+      <div class="modal-header">
+        <h3>{{ selectedCategory }}</h3>
+        <button class="close-btn" (click)="closeCategoryModal()">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        @if (isCategoryLoading) {
+          <div class="loading-spinner">
+            <i class="fas fa-spinner fa-spin"></i>
+            <p>Loading medicines...</p>
+          </div>
+        } @else if (categoryMedicines.length === 0) {
+          <div class="empty-category">
+            <i class="fas fa-box-open"></i>
+            <p>Sorry, we shall add this in the inventory soon</p>
+          </div>
+        } @else {
+          <div class="medicine-list">
+            @for (med of categoryMedicines; track med.id) {
+              <div class="medicine-item">
+                <div class="medicine-info">
+                  <h4>{{ med.name }}</h4>
+                  <p class="manufacturer">{{ med.manufacturer }}</p>
+                </div>
+                <div class="medicine-details">
+                  <span class="price">₹{{ med.price }}</span>
+                  <span class="stock" [class.low-stock]="med.stockQuantity < 10">
+                    Stock: {{ med.stockQuantity }}
+                  </span>
+                </div>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+}
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=100&q=80" alt="" class="cta-icon-img" />
+      <h2>Ready to Partner With Us?</h2>
+      <p>Join 500+ pharmacies who trust Rani Pharma for quality medicines at the best wholesale prices.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/919777096527?text=Hi%20how%20may%20I%20help" target="_blank" class="btn btn-secondary">
+          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        </a>
+        <a routerLink="/contact" class="btn btn-outline" style="border-color: white; color: white;">
+          <i class="fas fa-envelope"></i> Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

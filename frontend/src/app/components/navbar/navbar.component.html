@@ -1,0 +1,24 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="container nav-container">
+    <a routerLink="/" class="logo">
+      <i class="fas fa-pills"></i>
+      <span>Rani Pharma</span>
+    </a>
+
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <i [class]="isMenuOpen ? 'fas fa-times' : 'fas fa-bars'"></i>
+    </button>
+
+    <ul class="nav-links" [class.active]="isMenuOpen">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="isMenuOpen=false">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="isMenuOpen=false">About</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="isMenuOpen=false">Contact</a></li>
+      @if (authService.isLoggedIn()) {
+        <li><a routerLink="/inventory" routerLinkActive="active" (click)="isMenuOpen=false">Inventory</a></li>
+        <li><a class="nav-btn logout-btn" (click)="logout()"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+      } @else {
+        <li><a routerLink="/login" routerLinkActive="active" class="nav-btn login-btn" (click)="isMenuOpen=false"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+      }
+    </ul>
+  </div>
+</nav>

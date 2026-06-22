@@ -1,0 +1,4 @@
+Properties/
+*.db
+bin/
+obj/
